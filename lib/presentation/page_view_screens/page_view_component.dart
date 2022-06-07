@@ -3,13 +3,6 @@ import '../../core/theme/text_theme.dart';
 
 class PageViewComponent extends StatelessWidget {
 
-  final TextStyle PageTextStyle = const TextStyle(fontSize: 25,fontWeight: FontWeight.w900,color: Color(0xffffffff),shadows: [
-    Shadow(
-      blurRadius: 10.0,
-      color: Colors.black87,
-      offset: Offset(5.0, 5.0),)
-  ]);
-
   final String image;
   final String text;
 
@@ -25,7 +18,7 @@ class PageViewComponent extends StatelessWidget {
               image: AssetImage(image))
       ),
 
-      child: Center(child: Text(text,style: PageTextStyle,)),
+      child: Center(child: Text(text,style: AppTextStyle.pageTextStyle,)),
 
     );
   }

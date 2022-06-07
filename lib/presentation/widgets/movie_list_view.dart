@@ -7,11 +7,13 @@ class MovieListView extends StatelessWidget {
   MovieListView({Key? key}) : super(key: key);
 
   final _movies = [
-    Movie('Fight club','Drama','assets/images/test_movie_poster_image_2.png'),
-    Movie('Matrix','Action','assets/images/test_movie_poster_image_3.png'),
-    Movie('Rush','Drama','assets/images/test_movie_poster_image_4.png'),
-    Movie('Rush','Drama','assets/images/test_movie_poster_image_2.png'),
+    Movie('Fight club','Drama','assets/images/test_movie_poster_image_2.png','31.03.1999'),
+    Movie('Matrix','Action','assets/images/test_movie_poster_image_3.png','31.03.1999'),
+    Movie('Rush','Drama','assets/images/test_movie_poster_image_4.png','31.03.1992'),
+    Movie('Rush','Drama','assets/images/test_movie_poster_image_2.png','09.02.1929'),
   ];
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +42,7 @@ class MovieListView extends StatelessWidget {
               children: [
                 Container(
 
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     boxShadow: [
                       BoxShadow(
                         color: Colors.black54,
@@ -66,9 +68,9 @@ class MovieListView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
 
                     children: [
-                      Text(movie.title,style: AppTextStyle.movieTitleStyle,maxLines: 2,overflow: TextOverflow.ellipsis),
+                      Text(movie.title,style: AppTextStyle.categoryTextStyle,maxLines: 2,overflow: TextOverflow.ellipsis),
 
-                      Text(movie.categorie,style: AppTextStyle.movieSubTitleStyle,maxLines: 1,overflow: TextOverflow.ellipsis),
+                      Text(movie.categorie,style: AppTextStyle.movieDateStyle,maxLines: 1,overflow: TextOverflow.ellipsis),
                     ],
                   ),
                 ),
@@ -84,6 +86,6 @@ class MovieListView extends StatelessWidget {
 BoxDecoration MovieContainerDecoration(){
   return BoxDecoration(
     borderRadius: BorderRadius.circular(10),
-    color: Colors.orange,
+    color: Colors.black26,
   );
 }

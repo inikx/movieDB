@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:movies_db/presentation/screens/main_screen.dart';
+import 'package:movies_db/presentation/screens/movie_page.dart';
 
 
 void main() {
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
       ),
-      home: MainScreen(),
+      home: MoviePage(),
     );
   }
 }
