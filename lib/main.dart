@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:movies_db/presentation/screens/main_screen.dart';
-import 'package:movies_db/presentation/screens/movie_page.dart';
+import 'package:movies_db/core/theme/theme_class.dart';
+import 'package:movies_db/view/screens/main_screen.dart';
+import 'package:movies_db/view/screens/on_boarding_screens/on_boarding.dart';
+
+import 'view/screens/home_screen/home_page.dart';
+import 'view/screens/movie_screen/movie_page.dart';
 
 
 void main() {
@@ -23,10 +27,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-      ),
-      home: MoviePage(),
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: ThemeMode.light,
+      home: OnBoarding(),
     );
   }
 }
