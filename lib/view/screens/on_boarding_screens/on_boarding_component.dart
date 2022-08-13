@@ -39,7 +39,7 @@ class OnBoardingComponent extends StatelessWidget {
             width: MediaQuery.of(context).size.width
           ),
           
-          addVerticalSpace(MediaQuery.of(context).size.height * 0.08),
+          addVerticalSpace(MediaQuery.of(context).size.height * 0.04),
 
           Text(header,style: Theme.of(context).textTheme.headline1),
 
