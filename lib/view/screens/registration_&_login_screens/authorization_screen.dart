@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movies_db/core/utils/helper_widgets.dart';
-import 'package:movies_db/view/screens/registration_&_login_screens/login_screen.dart';
 import 'package:movies_db/view/screens/registration_&_login_screens/registration_screen.dart';
+import 'widgets/auth_page_layout.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({Key? key}) : super(key: key);
@@ -50,12 +50,25 @@ class _AuthScreenState extends State<AuthScreen> with TickerProviderStateMixin{
               addVerticalSpace(MediaQuery.of(context).size.height * 0.06),
 
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.6,
+                height: MediaQuery.of(context).size.height * 0.65,
                 child: TabBarView(
+                  physics: const BouncingScrollPhysics(),
                   controller: _tabController,
-                    children: [
-                      LoginScreen(),
-                      RegistrationPage()
+                    children: const [
+
+                      //loginPage
+                      AuthPageComponent(
+                        header: "Let's you in",
+                        buttonText: 'Sign in',
+                      ),
+                      //loginPage
+
+                      //registrationPage
+                      AuthPageComponent(
+                          header: "Create Your Account",
+                          buttonText: "Sign Up"
+                      )
+                      //registrationPage
                     ]
                 ),
               )

@@ -30,9 +30,9 @@ class OnBoarding extends StatelessWidget {
               ),
 
               OnBoardingComponent(
-                header: '',
-                description: '',
-                lottie: 'assets/lotties/movie_lottie.json',
+                header: 'Track your progress',
+                description: 'Add movies to your "watched-list" and track your total progress',
+                lottie: 'assets/lotties/analysis_lottie.json',
 
               )
 
