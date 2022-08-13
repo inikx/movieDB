@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:movies_db/core/theme/theme_class.dart';
 import 'package:movies_db/view/screens/main_screen.dart';
 import 'package:movies_db/view/screens/on_boarding_screens/on_boarding.dart';
+import 'package:movies_db/view/screens/registration_&_login_screens/authorization_screen.dart';
 
 import 'view/screens/home_screen/home_page.dart';
 import 'view/screens/movie_screen/movie_page.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.light,
-      home: OnBoarding(),
+      home: AuthScreen(),
     );
   }
 }
