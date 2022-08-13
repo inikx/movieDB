@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movies_db/view/screens/favorites_screen/favorite_screen.dart';
 import 'package:movies_db/view/screens/home_screen/home_page.dart';
 import 'package:movies_db/view/screens/movie_screen/movie_page.dart';
 import 'package:movies_db/view/screens/search_screen/search_page.dart';
@@ -19,6 +20,7 @@ class _MainScreenState extends State<MainScreen> {
   List<Widget> screensList = [
     HomePage(),
     SearchScreen(),
+    FavouritesScreen(),
     ProfileScreen(),
   ];
 
