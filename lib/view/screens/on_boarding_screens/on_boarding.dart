@@ -72,7 +72,7 @@ class OnBoarding extends StatelessWidget {
 
                 text: 'Get started',
 
-                onPressed: () => Navigator.of(context).push(CupertinoPageRoute(builder: (context) => MainScreen())),
+                onPressed: () => Navigator.of(context).pushReplacement(CupertinoPageRoute(builder: (context) => MainScreen())),
 
               ),
             ),

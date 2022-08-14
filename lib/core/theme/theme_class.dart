@@ -7,6 +7,20 @@ class AppTheme{
 
     scaffoldBackgroundColor: Colors.white,
 
+    appBarTheme: const AppBarTheme(
+      titleTextStyle: TextStyle(
+        color: appBlack,
+        fontSize: 25,
+        fontWeight: FontWeight.w600
+      ),
+      centerTitle: false,
+      elevation: 0,
+      backgroundColor: Colors.transparent,
+      iconTheme: IconThemeData(
+        color: appBlack
+      )
+    ),
+
     tabBarTheme: const TabBarTheme(
       indicatorSize: TabBarIndicatorSize.label,
       indicator: UnderlineTabIndicator(
@@ -37,6 +51,8 @@ class AppTheme{
       ),
     ),
 
+    fontFamily: 'Urbanist',
+
     textTheme: const TextTheme(
       headline1: TextStyle(
 
@@ -47,17 +63,23 @@ class AppTheme{
       ),
 
       headline2: TextStyle(
-        color: Colors.black,
+        color: appBlack,
         fontWeight: FontWeight.w600,
         fontSize: 20
       ),
 
       bodyText1: TextStyle(
 
-        color: Colors.black,
+        color: appBlack,
         fontSize: 18,
 
       ),
+
+      button: TextStyle(
+        color: appBlack,
+        fontSize: 16
+      )
+
     )
   );
 
