@@ -4,7 +4,7 @@ import 'package:movies_db/core/constants/colors.dart';
 class CustomInputField extends StatelessWidget {
 
   final String hint;
-  final Icon icon;
+  final IconData icon;
   final TextEditingController? controller;
 
   const CustomInputField({Key? key,required this.hint,required this.icon, this.controller}) : super(key: key);
@@ -20,17 +20,16 @@ class CustomInputField extends StatelessWidget {
   }
 }
 
-InputDecoration textFieldDecoration(String hint,Icon icon){
+InputDecoration textFieldDecoration(String hint,IconData icon){
   return InputDecoration(
     filled: true,
-
     fillColor: const Color(0xffdcdcdc),
     hintText: hint,
     hintStyle: const TextStyle(
       color: Colors.white,
       fontSize: 18
     ),
-    icon: icon,
+    icon: Icon(icon),
     iconColor: accentColor,
 
     enabledBorder: OutlineInputBorder(

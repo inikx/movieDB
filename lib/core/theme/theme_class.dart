@@ -15,7 +15,7 @@ class AppTheme{
       ),
       centerTitle: false,
       elevation: 0,
-      backgroundColor: Colors.transparent,
+      backgroundColor: Colors.white,
       iconTheme: IconThemeData(
         color: appBlack
       )
@@ -51,7 +51,16 @@ class AppTheme{
       ),
     ),
 
+    inputDecorationTheme: const InputDecorationTheme(
+      focusColor: Colors.red,
+      iconColor: accentColor
+    ),
+
     fontFamily: 'Urbanist',
+
+    primaryColor: accentColor,
+    focusColor: accentColor,
+
 
     textTheme: const TextTheme(
       headline1: TextStyle(

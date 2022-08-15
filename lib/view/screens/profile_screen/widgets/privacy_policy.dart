@@ -20,6 +20,8 @@ class PrivacyPolicy extends StatelessWidget {
               0
           ),
           child: SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
+
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
