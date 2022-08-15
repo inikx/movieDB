@@ -1,34 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:movies_db/core/constants/colors.dart';
 
-class SmallMovieCard extends StatefulWidget {
-  const SmallMovieCard({Key? key}) : super(key: key);
+class MovieCard extends StatefulWidget {
+
+  final bool? leftPadding;
+  final double height;
+  final double width;
+
+  const MovieCard({Key? key, this.leftPadding, required this.height, required this.width}) : super(key: key);
 
   @override
-  State<SmallMovieCard> createState() => _SmallMovieCardState();
+  State<MovieCard> createState() => _MovieCardState();
 }
 
-class _SmallMovieCardState extends State<SmallMovieCard> {
+class _MovieCardState extends State<MovieCard> {
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-        left: MediaQuery.of(context).size.width * 0.03
+        left: widget.leftPadding == true ? MediaQuery.of(context).size.width * 0.03 : 0,
       ),
       child: Container(
-
-        height: MediaQuery.of(context).size.height * 0.25,
-        width: MediaQuery.of(context).size.height * 0.17,
+        height: widget.height,
+        width: widget.width,
         clipBehavior: Clip.hardEdge,
 
-
         decoration: BoxDecoration(
-
           borderRadius: BorderRadius.circular(20),
           image: DecorationImage(
             fit: BoxFit.cover, image: AssetImage('assets/images/test_movie_poster_image_2.png',)
           )
         ),
+
         child: Align(
           alignment: const Alignment(-0.8, -0.9),
           child: Container(

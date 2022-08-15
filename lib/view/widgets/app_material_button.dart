@@ -7,9 +7,9 @@ class AppMaterialButton extends StatelessWidget {
   final VoidCallback onPressed;
   final Color? backgroundColor;
   final Color? textColor;
+  final double? width;
 
-  AppMaterialButton({Key? key, required this.text, required this.onPressed, this.backgroundColor, this.textColor}) : super(key: key);
-
+  const AppMaterialButton({Key? key, required this.text, required this.onPressed, this.backgroundColor, this.textColor, this.width}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class AppMaterialButton extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       color: backgroundColor ?? accentColor,
       elevation: 0,
-      minWidth: MediaQuery.of(context).size.width,
+      minWidth: width ?? MediaQuery.of(context).size.width,
 
       shape: const StadiumBorder(),
 
