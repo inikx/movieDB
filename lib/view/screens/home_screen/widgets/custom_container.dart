@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movies_db/core/constants/colors.dart';
 import 'package:movies_db/core/utils/helper_widgets.dart';
-import 'package:movies_db/view/screens/home_screen/widgets/small_movie_card.dart';
+import 'package:movies_db/view/widgets/small_movie_card.dart';
 
 class CustomContainer extends StatelessWidget {
 
@@ -43,7 +43,11 @@ class CustomContainer extends StatelessWidget {
                     ),
                     scrollDirection: Axis.horizontal,
                     itemCount: 3,
-                    itemBuilder: (context,index) => SmallMovieCard()
+                    itemBuilder: (context,index) => MovieCard(
+                      leftPadding: true,
+                      height: MediaQuery.of(context).size.height,
+                      width: MediaQuery.of(context).size.width * 0.4,
+                    )
                 )
             )
 
