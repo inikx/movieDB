@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movies_db/view/screens/favorites_screen/favorite_screen.dart';
 import 'package:movies_db/view/screens/home_screen/home_page.dart';
-import 'package:movies_db/view/screens/movie_screen/movie_page.dart';
 import 'package:movies_db/view/screens/search_screen/search_page.dart';
 
 import 'profile_screen/profile_screen.dart';
@@ -45,22 +44,34 @@ class _MainScreenState extends State<MainScreen> {
         items: const [
 
           BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              icon: ImageIcon(
+                AssetImage('assets/icons/home.png'),
+                size: 25,
+              ),
               label: 'Home'
           ),
 
           BottomNavigationBarItem(
-              icon: Icon(Icons.search),
+              icon: ImageIcon(
+                AssetImage('assets/icons/compass.png'),
+                size: 25,
+              ),
               label: 'Explore'
           ),
 
           BottomNavigationBarItem(
-              icon: Icon(Icons.bookmarks_outlined),
+              icon: ImageIcon(
+                AssetImage('assets/icons/bookmark-variant.png'),
+                size: 25,
+              ),
               label: 'Favorites'
           ),
 
           BottomNavigationBarItem(
-              icon: Icon(Icons.person_outline),
+              icon: ImageIcon(
+                AssetImage('assets/icons/user.png'),
+                size: 25,
+              ),
               label: 'Profile'
           )
 

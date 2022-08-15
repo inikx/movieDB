@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:movies_db/core/utils/helper_widgets.dart';
-import 'package:movies_db/view/screens/registration_&_login_screens/registration_screen.dart';
 import 'widgets/auth_page_layout.dart';
 
 class AuthScreen extends StatefulWidget {
@@ -29,10 +28,11 @@ class _AuthScreenState extends State<AuthScreen> with TickerProviderStateMixin{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(
-            vertical: MediaQuery.of(context).size.height * 0.05
+          padding: EdgeInsets.only(
+            top: MediaQuery.of(context).size.height * 0.05
           ),
 
           child: Column(
@@ -47,10 +47,10 @@ class _AuthScreenState extends State<AuthScreen> with TickerProviderStateMixin{
                   ]
               ),
 
-              addVerticalSpace(MediaQuery.of(context).size.height * 0.06),
+              addVerticalSpace(MediaQuery.of(context).size.height * 0.04),
 
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.65,
+                height: MediaQuery.of(context).size.height * 0.75,
                 child: TabBarView(
                   physics: const BouncingScrollPhysics(),
                   controller: _tabController,

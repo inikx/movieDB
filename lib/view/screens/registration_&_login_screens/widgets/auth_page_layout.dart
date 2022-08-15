@@ -2,12 +2,11 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:movies_db/core/constants/colors.dart';
 import 'package:movies_db/core/utils/helper_widgets.dart';
 import 'package:movies_db/view/screens/on_boarding_screens/on_boarding.dart';
 import 'package:movies_db/view/widgets/app_material_button.dart';
 import 'package:movies_db/view/widgets/app_outlined_button.dart';
-import 'custom_input_field.dart';
+import '../../../widgets/custom_input_field.dart';
 
 class AuthPageComponent extends StatelessWidget {
 
@@ -49,15 +48,15 @@ class AuthPageComponent extends StatelessWidget {
           CustomInputField(
             controller: emailFieldController,
             hint: 'Email',
-            icon: const Icon(Icons.mail,color: accentColor),
+            icon: Icons.mail,
           ),
 
           addVerticalSpace(MediaQuery.of(context).size.height * 0.02),
 
-          const CustomInputField(
+          CustomInputField(
+            controller: passwordFieldController,
             hint: 'Password',
-            icon: Icon(Icons.lock,color: accentColor
-            ),
+            icon: Icons.lock,
           ),
 
           addVerticalSpace(MediaQuery.of(context).size.height * 0.06),
