@@ -4,10 +4,10 @@ import 'package:movies_db/core/constants/colors.dart';
 class MovieCard extends StatefulWidget {
 
   final bool? leftPadding;
-  final double height;
-  final double width;
+  final double? height;
+  final double? width;
 
-  const MovieCard({Key? key, this.leftPadding, required this.height, required this.width}) : super(key: key);
+  const MovieCard({Key? key, this.leftPadding, this.height, this.width}) : super(key: key);
 
   @override
   State<MovieCard> createState() => _MovieCardState();

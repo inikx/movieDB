@@ -17,7 +17,7 @@ class AppTheme{
       elevation: 0,
       backgroundColor: Colors.white,
       iconTheme: IconThemeData(
-        color: appBlack
+        color: accentColor
       )
     ),
 
@@ -61,7 +61,6 @@ class AppTheme{
 
     primaryColor: accentColor,
     focusColor: accentColor,
-
 
     textTheme: const TextTheme(
       headline1: TextStyle(

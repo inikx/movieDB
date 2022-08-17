@@ -58,9 +58,9 @@ class _InfoContainerState extends State<InfoContainer> {
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
-                Text('2021.',style: Theme.of(context).textTheme.bodyText1),
+                Text('1999.',style: Theme.of(context).textTheme.headline2),
                 addHorizontalSpace(MediaQuery.of(context).size.width * 0.02),
-                Text('Genre:',style: Theme.of(context).textTheme.bodyText1),
+                Text('Genre:',style: Theme.of(context).textTheme.headline2),
               ],
             ),
           ),

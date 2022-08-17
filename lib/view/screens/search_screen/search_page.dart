@@ -45,35 +45,22 @@ class _SearchScreenState extends State<SearchScreen> {
           ),
         ),
 
-        SliverToBoxAdapter(
-          child: Padding(
-            padding: EdgeInsets.fromLTRB(
-                MediaQuery.of(context).size.width * 0.03,
-                MediaQuery.of(context).size.height * 0.02,
-                MediaQuery.of(context).size.width * 0.03,
-                1
-            ),
-            child: SizedBox(
-              height: MediaQuery.of(context).size.height,
-              child: Expanded(
-                  child:GridView.builder(
-                    itemCount: 20,
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        childAspectRatio: 1.5/2
-                    ),
-                    itemBuilder: (context,index) => Padding(
-                      padding: const EdgeInsets.all(5),
-                      child: MovieCard(
-                        height: MediaQuery.of(context).size.height,
-                        width: MediaQuery.of(context).size.width,
+        SliverGrid(
+            delegate: SliverChildBuilderDelegate(
+                  (context,index) =>
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: MovieCard(),
                       ),
-                    ),
-                )
-              ),
+              childCount: 20,
+
             ),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              childAspectRatio: 1.5/2
           ),
-        ),
+
+        )
 
       ],
     );

@@ -12,6 +12,7 @@ class _MovieScreenState extends State<MovieScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: CustomScrollView(
         slivers: [
 
@@ -21,7 +22,7 @@ class _MovieScreenState extends State<MovieScreen> {
             flexibleSpace: FlexibleSpaceBar(
               background: Container(
                 decoration: const BoxDecoration(
-                  image: DecorationImage(image: AssetImage('assets/images/test_movie_poster_image.png'),fit: BoxFit.cover)
+                  image: DecorationImage(image: AssetImage('assets/images/test_movie_poster_image_2.png'),fit: BoxFit.cover)
                 ),
               ),
             ),
@@ -29,9 +30,14 @@ class _MovieScreenState extends State<MovieScreen> {
 
           SliverToBoxAdapter(
             child: InfoContainer(
-              title: 'Mortal Combat 10',
+              title: 'Fight Club',
               description: 'Washed-up MMA fighter Cole Young (Lewis Tan) is chosen to fight for Earth against evil would-be conquerors from other realms in Mortal Kombat, a once-in-a-generation tournament.',
+            ),
+          ),
 
+          SliverToBoxAdapter(
+            child: Expanded(
+              child: Text('Пивчик'),
             ),
           )
 
