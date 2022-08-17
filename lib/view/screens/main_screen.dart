@@ -36,46 +36,54 @@ class _MainScreenState extends State<MainScreen> {
         child: screensList[_currentIndex],
       ),
 
-      bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(color: Colors.black54, blurRadius: 2)
+            ]
+        ),
+        child: BottomNavigationBar(
 
-        currentIndex: _currentIndex,
-        onTap: _onTabChanged,
+          currentIndex: _currentIndex,
+          onTap: _onTabChanged,
+          backgroundColor: Colors.white,
 
-        items: const [
+          items: const [
 
-          BottomNavigationBarItem(
-              icon: ImageIcon(
-                AssetImage('assets/icons/home.png'),
-                size: 25,
-              ),
-              label: 'Home'
-          ),
+            BottomNavigationBarItem(
+                icon: ImageIcon(
+                  AssetImage('assets/icons/home.png'),
+                  size: 25,
+                ),
+                label: 'Home'
+            ),
 
-          BottomNavigationBarItem(
-              icon: ImageIcon(
-                AssetImage('assets/icons/compass.png'),
-                size: 25,
-              ),
-              label: 'Explore'
-          ),
+            BottomNavigationBarItem(
+                icon: ImageIcon(
+                  AssetImage('assets/icons/compass.png'),
+                  size: 25,
+                ),
+                label: 'Explore'
+            ),
 
-          BottomNavigationBarItem(
-              icon: ImageIcon(
-                AssetImage('assets/icons/bookmark-variant.png'),
-                size: 25,
-              ),
-              label: 'Favorites'
-          ),
+            BottomNavigationBarItem(
+                icon: ImageIcon(
+                  AssetImage('assets/icons/bookmark-variant.png'),
+                  size: 25,
+                ),
+                label: 'Favorites'
+            ),
 
-          BottomNavigationBarItem(
-              icon: ImageIcon(
-                AssetImage('assets/icons/user.png'),
-                size: 25,
-              ),
-              label: 'Profile'
-          )
+            BottomNavigationBarItem(
+                icon: ImageIcon(
+                  AssetImage('assets/icons/user.png'),
+                  size: 25,
+                ),
+                label: 'Profile'
+            )
 
-        ],
+          ],
+        ),
       ),
 
     );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movies_db/core/constants/colors.dart';
 import 'package:movies_db/core/utils/helper_widgets.dart';
-import 'package:movies_db/view/widgets/small_movie_card.dart';
+import 'package:movies_db/view/widgets/movie_card.dart';
 
 class CustomContainer extends StatelessWidget {
 

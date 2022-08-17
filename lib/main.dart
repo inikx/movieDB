@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:movies_db/core/theme/theme_class.dart';
+import 'package:movies_db/view/screens/movie_screen/movie_page.dart';
 import 'package:movies_db/view/screens/registration_&_login_screens/authorization_screen.dart';
 
 void main() {
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.light,
-      home: const AuthScreen(),
+      home: const MovieScreen(),
     );
   }
 }

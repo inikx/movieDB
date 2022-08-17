@@ -49,6 +49,7 @@ class AppTheme{
       unselectedLabelStyle: TextStyle(
         color: Colors.grey
       ),
+      elevation: 5
     ),
 
     inputDecorationTheme: const InputDecorationTheme(
@@ -75,6 +76,12 @@ class AppTheme{
         color: appBlack,
         fontWeight: FontWeight.w600,
         fontSize: 20
+      ),
+
+      headline3: TextStyle(
+        color: appBlack,
+        fontSize: 30,
+        fontWeight: FontWeight.w800
       ),
 
       bodyText1: TextStyle(
