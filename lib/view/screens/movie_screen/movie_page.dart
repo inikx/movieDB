@@ -1,8 +1,14 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:movies_db/core/constants/colors.dart';
+import 'package:movies_db/core/utils/helper_widgets.dart';
 import 'package:movies_db/view/screens/movie_screen/widgets/info_container.dart';
 
 class MovieScreen extends StatefulWidget {
-  const MovieScreen({Key? key}) : super(key: key);
+
+  List<String> actorsList = ['Edward Norton','Brad Pitt','Zak Grin'];
+
+  MovieScreen({Key? key}) : super(key: key);
 
   @override
   State<MovieScreen> createState() => _MovieScreenState();
@@ -18,6 +24,19 @@ class _MovieScreenState extends State<MovieScreen> {
 
           SliverAppBar(
             expandedHeight: MediaQuery.of(context).size.height * 0.4,
+            actions: [
+              Row(
+                children: [
+                  const ImageIcon(
+                    AssetImage('assets/icons/star.png'),
+                    color: accentColor,
+                  ),
+                  addHorizontalSpace(MediaQuery.of(context).size.width * 0.02),
+                  Text('9.8',style: TextStyle(color: accentColor,fontSize: 20,fontWeight: FontWeight.w700)),
+                  addHorizontalSpace(MediaQuery.of(context).size.width * 0.04),
+                ],
+              )
+            ],
             pinned: false,
             flexibleSpace: FlexibleSpaceBar(
               background: Container(
@@ -36,13 +55,48 @@ class _MovieScreenState extends State<MovieScreen> {
           ),
 
           SliverToBoxAdapter(
-            child: Expanded(
-              child: Text('Пивчик'),
+            child: SizedBox(
+              height: MediaQuery.of(context).size.height * 0.07,
+              width: MediaQuery.of(context).size.width,
+              child: ListView.builder(
+                itemCount: widget.actorsList.length,
+                scrollDirection: Axis.horizontal,
+                  itemBuilder: (context,index) => Padding(
+                    padding: EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.04),
+                    child: SizedBox(
+                      child: Row(
+
+                        children: [
+
+                          CircleAvatar(
+                            radius: 25,
+                          ),
+
+                          addHorizontalSpace(MediaQuery.of(context).size.width * 0.03),
+
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.2,
+                            child: AutoSizeText(
+                                widget.actorsList[index],
+                              style: TextStyle(
+                                fontWeight: FontWeight.w700,
+                                fontSize: 16,
+                              ),
+                            ),
+                          ),
+
+
+
+                        ],
+                      ),
+                    )
+                  )
+              ),
             ),
           )
-
         ],
       ),
     );
   }
 }
+

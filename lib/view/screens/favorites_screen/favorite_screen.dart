@@ -26,7 +26,7 @@ class _FavouritesScreenState extends State<FavouritesScreen> {
             padding: EdgeInsets.symmetric(
               horizontal: MediaQuery.of(context).size.width * 0.06
             ),
-            height: MediaQuery.of(context).size.height,
+            height: MediaQuery.of(context).size.height * 0.7,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

@@ -15,6 +15,9 @@ class CustomInputField extends StatelessWidget {
     return SizedBox(
       width: width ?? MediaQuery.of(context).size.width,
       child: TextField(
+        style: const TextStyle(
+          color: accentColor
+        ),
         controller: controller,
         cursorColor: accentColor,
         decoration: textFieldDecoration(hint,icon),

@@ -20,6 +20,7 @@ class OnBoarding extends StatelessWidget {
         children: [
 
           PageView(
+            physics: const BouncingScrollPhysics(),
             controller: _pageController,
             children: const [
 

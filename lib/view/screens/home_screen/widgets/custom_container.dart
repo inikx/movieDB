@@ -40,6 +40,7 @@ class CustomContainer extends StatelessWidget {
 
             Expanded(
                 child: ListView.builder(
+                  physics: const BouncingScrollPhysics(),
                     padding: EdgeInsets.only(
                       left: MediaQuery.of(context).size.width * 0.02
                     ),

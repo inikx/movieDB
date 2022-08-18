@@ -43,7 +43,7 @@ class AppTheme{
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       selectedItemColor: accentColor,
       selectedIconTheme: IconThemeData(
-        size: 28
+        size: 28,
       ),
       unselectedItemColor: Colors.grey,
       unselectedLabelStyle: TextStyle(

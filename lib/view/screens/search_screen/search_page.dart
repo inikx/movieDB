@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movies_db/core/constants/colors.dart';
-import 'package:movies_db/core/utils/helper_widgets.dart';
-import 'package:movies_db/view/widgets/app_material_button.dart';
 import 'package:movies_db/view/widgets/custom_input_field.dart';
-import 'package:movies_db/view/widgets/custom_sliver_app_bar.dart';
 import 'package:movies_db/view/widgets/movie_card.dart';
 
 class SearchScreen extends StatefulWidget {
@@ -17,11 +14,12 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
+      physics: const BouncingScrollPhysics(),
 
       slivers: [
 
         SliverAppBar(
-          toolbarHeight: MediaQuery.of(context).size.height * 0.08,
+          toolbarHeight: MediaQuery.of(context).size.height * 0.1,
           elevation: 2,
           floating: true,
           title: Row(
