@@ -17,6 +17,7 @@ dependencies:
   smooth_page_indicator: any
   lottie: any
   auto_size_text: any
+  url_launcher: any
 
 dev_dependencies:
   flutter_test:

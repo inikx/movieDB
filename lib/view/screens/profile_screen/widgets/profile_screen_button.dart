@@ -8,8 +8,9 @@ class ProfilePageButton extends StatelessWidget {
   final String text;
   final IconData icon;
   final Widget? child;
+  final Color? color;
 
-  const ProfilePageButton({Key? key, required this.onPressed, required this.text, required this.icon, this.child}) : super(key: key);
+  const ProfilePageButton({Key? key, required this.onPressed, required this.text, required this.icon, this.child, this.color}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,11 +26,11 @@ class ProfilePageButton extends StatelessWidget {
         children: [
           Row(
             children: [
-              Icon(icon,size: 32,),
+              Icon(icon,size: 32,color: color ?? appBlack),
               addHorizontalSpace(MediaQuery.of(context).size.width * 0.06),
               Text(
                 text,
-                style: const TextStyle(fontSize: 20),
+                style: TextStyle(fontSize: 20,color: color ?? appBlack),
               )
             ],
           ),

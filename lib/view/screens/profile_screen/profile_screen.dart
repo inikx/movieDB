@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movies_db/core/constants/colors.dart';
 import 'package:movies_db/core/utils/helper_widgets.dart';
+import 'package:movies_db/view/screens/profile_screen/widgets/help_center.dart';
 import 'package:movies_db/view/screens/profile_screen/widgets/privacy_policy.dart';
 import 'package:movies_db/view/screens/profile_screen/widgets/profile_screen_button.dart';
 import 'package:movies_db/view/widgets/custom_sliver_app_bar.dart';
@@ -76,9 +77,14 @@ class _ProfileScreenState extends State<ProfileScreen>{
                   icon: Icons.language
               ),
               ProfilePageButton(
-                  onPressed: () => Navigator.of(context).push(CupertinoPageRoute(builder: (context)=> PrivacyPolicy())),
+                  onPressed: () => Navigator.of(context).push(CupertinoPageRoute(builder: (context)=> const PrivacyPolicy())),
                   text: 'Privacy policy',
                   icon: Icons.info_outline,
+              ),
+              ProfilePageButton(
+                onPressed: () => Navigator.of(context).push(CupertinoPageRoute(builder: (context)=> const HelpCenter())),
+                text: 'Help Center',
+                icon: Icons.info_outline,
               ),
               ProfilePageButton(
                   onPressed: () {  },
@@ -93,6 +99,13 @@ class _ProfileScreenState extends State<ProfileScreen>{
                       });
                     },
                   ),
+              ),
+              ProfilePageButton(
+                onPressed: () {},
+                color: accentColor,
+                text: 'Logout',
+                icon: Icons.exit_to_app,
+                child: const SizedBox(),
               )
             ],
           ),
