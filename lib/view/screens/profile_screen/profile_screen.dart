@@ -4,7 +4,6 @@ import 'package:movies_db/core/constants/colors.dart';
 import 'package:movies_db/core/utils/helper_widgets.dart';
 import 'package:movies_db/view/screens/profile_screen/widgets/privacy_policy.dart';
 import 'package:movies_db/view/screens/profile_screen/widgets/profile_screen_button.dart';
-import 'package:movies_db/view/widgets/app_material_button.dart';
 import 'package:movies_db/view/widgets/custom_sliver_app_bar.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -14,7 +13,10 @@ class ProfileScreen extends StatefulWidget {
   State<ProfileScreen> createState() => _ProfileScreenState();
 }
 
-class _ProfileScreenState extends State<ProfileScreen> {
+class _ProfileScreenState extends State<ProfileScreen>{
+
+  bool switched = false;
+
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
@@ -74,14 +76,23 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   icon: Icons.language
               ),
               ProfilePageButton(
-                  onPressed: () {  },
-                  text: 'Dark Mode',
-                  icon: Icons.wb_sunny_outlined
-              ),
-              ProfilePageButton(
                   onPressed: () => Navigator.of(context).push(CupertinoPageRoute(builder: (context)=> PrivacyPolicy())),
                   text: 'Privacy policy',
-                  icon: Icons.info_outline
+                  icon: Icons.info_outline,
+              ),
+              ProfilePageButton(
+                  onPressed: () {  },
+                  text: 'Dark Mode',
+                  icon: Icons.wb_sunny_outlined,
+                  child: Switch(
+                    activeColor: accentColor,
+                    value: switched,
+                    onChanged: (bool value) {
+                      setState(() {
+                        switched = value;
+                      });
+                    },
+                  ),
               )
             ],
           ),

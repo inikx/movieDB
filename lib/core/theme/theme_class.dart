@@ -62,6 +62,10 @@ class AppTheme{
     primaryColor: accentColor,
     focusColor: accentColor,
 
+    switchTheme: const SwitchThemeData(
+      splashRadius: 0,
+    ),
+
     textTheme: const TextTheme(
       headline1: TextStyle(
 

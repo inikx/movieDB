@@ -7,8 +7,9 @@ class ProfilePageButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String text;
   final IconData icon;
+  final Widget? child;
 
-  const ProfilePageButton({Key? key, required this.onPressed, required this.text, required this.icon}) : super(key: key);
+  const ProfilePageButton({Key? key, required this.onPressed, required this.text, required this.icon, this.child}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class ProfilePageButton extends StatelessWidget {
               )
             ],
           ),
-          const Icon(Icons.arrow_forward_ios,color: appBlack,size: 20,)
+          child ?? const Icon(Icons.arrow_forward_ios,color: appBlack,size: 20)
         ],
       ),
     );

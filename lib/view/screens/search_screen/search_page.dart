@@ -51,7 +51,6 @@ class _SearchScreenState extends State<SearchScreen> {
                         child: MovieCard(),
                       ),
               childCount: 20,
-
             ),
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
